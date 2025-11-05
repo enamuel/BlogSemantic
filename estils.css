@@ -1,0 +1,82 @@
+/*
+ * Full d'estils extern - Blog amb HTML Semàntic
+ * Responsable de la presentació visual del nostre blog.
+ */
+
+/* Estil general (body) */
+body {
+	font-family: Helvetica;
+	margin: 0; /* Elimina el marge per defecte del navegador */
+	background-color: #f4f4f4; /* Fons gris molt clar */
+}
+
+/* Estil de la capçalera (header) */
+header {
+	background-color: #E0F7FA;
+	color: black;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Estil de la navegació (nav) */
+nav {
+	background-color: #BABABA;
+	padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none; /* Elimina les boles de les llistes */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Posa els elements de la llista en línia */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Elimina la subratllat dels enllaços */
+    font-weight: bold;
+}
+
+/* Estil del contingut principal */
+main {
+    width: 90%; /* Ample del contingut */
+    margin: 20px auto; /* Centra el contingut a la pàgina */
+    display: flex; /* Utilitzem Flexbox per a posar l'article i l'aside al costat */
+    gap: 20px; /* Espaiat entre els elements */
+}
+
+/* Estil dels articles individuals */
+article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Cantons arrodonits */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra subtil */
+    flex: 3; /* Ocupa 3/4 parts de l'espai */
+}
+
+/* Estil de la barra lateral */
+aside {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1; /* Ocupa 1/4 part de l'espai */
+}
+
+/* Estil del peu de pàgina */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+	color: #c7e5ff;
+}
