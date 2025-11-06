@@ -80,3 +80,10 @@ footer {
 footer a {
 	color: #c7e5ff;
 }
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 3; /* ocupa 3/4 parts */
+}
