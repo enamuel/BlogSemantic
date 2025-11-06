@@ -54,10 +54,8 @@ main {
 article {
     background-color: white;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px; /* Cantons arrodonits */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra subtil */
-    flex: 3; /* Ocupa 3/4 parts de l'espai */
 }
 
 /* Estil de la barra lateral */
@@ -82,8 +80,9 @@ footer a {
 }
 
 .articles {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   flex: 3; /* ocupa 3/4 parts */
 }
+
