@@ -10,14 +10,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Blog de Programació</title>
 	<link rel="stylesheet" href="estils.css">
-
 </head>
-<body>
+<script>
+var favicon_images = [
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq1.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq2.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq3.png'
+                ],
+    image_counter = 0; // To keep track of the current image
 
+setInterval(function() {
+    // remove current favicon
+    if(document.querySelector("link[rel='icon']") !== null)
+        document.querySelector("link[rel='icon']").remove();
+    if(document.querySelector("link[rel='shortcut icon']") !== null)
+        document.querySelector("link[rel='shortcut icon']").remove();
+        
+    // add new favicon image
+    document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+    // If last image then goto first image
+    // Else go to next image    
+    if(image_counter == favicon_images.length -1)
+        image_counter = 0;
+    else
+        image_counter++;
+}, 700);
+</script>
+<body>
     <header>
         <h1>Blog de Programació</h1>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.htm">Inici</a></li>
@@ -25,33 +48,39 @@
             <li><a href="#contacte">Contacte</a></li>
         </ul>
     </nav>
-
-    <main>
+	<main>
+	<section class="inarticle">
         <article>
             <header>
-                <h2>CSS i "#rebeccapurple"</h2>
-                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+                <h2>Un món d'Enllaços i Imatges</h2>
+                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-11-16">16 de setembre de 2025</time></p>
             </header>
 		<section>
-                <p>Fa 10 anys, el creador de CSS va introduir el color #rebeccapurple.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere at neque ut luctus. Pellentesque felis dui, accumsan sed neque sit amet, sagittis aliquet orci. Aenean sed nisl arcu. Nunc nec nibh at odio sollicitudin mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum vel iaculis nisl, nec feugiat orci. Morbi ipsum neque, pharetra non purus ut, tristique viverra tortor. Integer sollicitudin mi quam, vel venenatis felis placerat vitae. Nulla aliquam magna turpis, id rutrum eros pharetra in.</p>
+                <p>Quan el WWW (World Wide Web) va ser creat, encara no existien els enllaços ni les les imatges. Un enllaç o Hyperlink, és una referència digital que prové l'accés directe a un recurs/element al fer click o tap.</p>
+		<p>A la segona pràctica del curs de programació, hem utilitzat les etiquetes &lt;a&gt; i &lt;img&gt; per afegir enllaços i imatges.</p>
+		<center>
+			<h1>Enllaços i Imatges</h1>
+				<iframe src="eimatges.htm" width="50%" height="400" frameborder="0"></iframe>
+		</center>
+		<br>
 		</section>
-
-        <aside>
+	</section>
+	<section>
+        <aside class="lateral">
             <h3>Pràctiques Recents</h3>
 		<a href="newcomen.htm" target="_blank">Projecte: Màquina de Newcomen</a>
-	<br>
+		<br>
 		<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
-            <p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
+		<br>
+		<a href="horari.htm" target="_blank">Projecte: Horari</a>
+		<p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
         </aside>
-
+	</section>
     </main>
-
     <footer id="contacte">
         <p>&copy; 2025 <a id="nomalumne" href="sobremi.htm">Emanuel Rodríguez Varela</a>. Tots els drets reservats.</p>
         <p>Email: <a href="mailto:26emanuel.rodriguez@iesramonberenguer.cat">26emanuel.rodriguez@iesramonberenguer.cat</a></p>
     </footer>
-
 </body>
-
 </html>
+
