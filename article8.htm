@@ -59,22 +59,20 @@ setInterval(function() {
                 <p>La pràctica final del trimestre és fer un blog de totes les pràctiques amb els coneixements adquirits i a més, afegir coneixements nous com l'HTML Semàntic i les diferents formes d'estilitzar en CSS.</p>
 		<p>En aquest projecte he decidit allotjar el blog en GitHub, per familiaritzar-me amb el lloc web i les seves característiques per "desplegar" llocs web a l'internet amb ajuda de GitHub Actions.</p>
 		<center>
-<!-- Targeta estil GitHub amb dades reals -->
-<a href="https://github.com/enamuel/BlogSemantic" target="_blank" class="github-card">
-  <div class="github-card">
-    <div class="card-header">
-      <span class="repo-name">BlogSemantic</span>
-      <span class="visibility">Public</span>
-    </div>
-    <p class="description">Blog de les pràctiques i exercicis fet amb HTML Semàntic.</p>
-    <div class="card-footer">
-      <span class="dot"></span>
-      <span class="language">HTML</span>
-      <span class="stars">★ <span id="stars-count">...</span></span>
-      <span class="forks">⑂ <span id="forks-count">...</span></span>
-    </div>
+				<!-- Targeta estil GitHub amb dades reals -->
+<div class="github-card">
+  <div class="card-header">
+    <a href="https://github.com/enamuel/BlogSemantic" target="_blank" class="repo-name">BlogSemantic</a>
+    <span class="visibility">Public</span>
   </div>
-</a>
+  <p class="description">Blog de les pràctiques i exercicis fet amb HTML Semàntic.</p>
+  <div class="card-footer">
+    <span class="dot"></span>
+    <span class="language">HTML</span>
+    <span class="stars">★ <span id="stars-count">...</span></span>
+    <span class="forks">⑂ <span id="forks-count">...</span></span>
+  </div>
+</div>
 
 <!-- Script per obtenir dades reals de GitHub -->
 <script>
@@ -117,6 +115,10 @@ setInterval(function() {
   font-size: 16px;
   font-weight: 600;
   color: #0969da;
+  text-decoration: none;
+}
+.repo-name:hover {
+  text-decoration: underline;
 }
 .visibility {
   background-color: #ddf4ff;
@@ -149,7 +151,6 @@ setInterval(function() {
   font-size: 13px;
 }
 </style>
-
 		</center>
 		</section>
 	</section>
@@ -171,3 +172,4 @@ setInterval(function() {
     </footer>
 </body>
 </html>
+
