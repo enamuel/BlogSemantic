@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Emanuel Rodriguez -->
+<!-- Programació Curs 25/26 -->
+<!-- Blog amb HTML Semàntic -->
+
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Programació</title>
+    <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blog de Programació</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.htm">Inici</a></li>
+            <li><a href="#">Sobre Mi</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+        </ul>
+    </nav>
+    <main class="inarticle">
+        <article>
+	<section>
+            <header>
+                <h2>Sobre Mi</h2>
+                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el 
+                   <time datetime="2025-11-05">5 de novembre de 2025</time></p>
+            </header>
+            <section>
+                <p>Soc l'Emanuel, tinc setze anys i faig 1r de Batxillerat Tecnològic a l'Institut Escolar Ramon Berenguer.</p>
+                <p>El meu perfil de GitHub és el següent:</p>
+		<center>
+<div class="github-card">
+  <img class="github-avatar" src="https://avatars.githubusercontent.com/u/242167827" alt="Foto de perfil de Emanuel">
+  <div class="github-info">
+    <div class="github-name">Emanuel</div>
+    <div class="github-user">@enamuel</div>
+  </div>
+  <a class="github-follow" href="https://github.com/enamuel" target="_blank">Follow</a>
+</div>
+
+<style>
+.github-card {
+  display: flex;
+  align-items: center;
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 12px 16px;
+  max-width: 420px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin: 20px auto;
+}
+
+.github-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.github-info {
+  flex-grow: 1;
+  margin-left: 12px;
+}
+
+.github-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2328;
+}
+
+.github-user {
+  font-size: 14px;
+  color: #656d76;
+}
+
+.github-follow {
+  background-color: #eff3f6;
+  color: #1f2328;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.github-follow:hover {
+  background-color: #d8dee4;
+}
+</style>
+</center>
+            </section>
+	</section>
+        </article>
+        <aside class="lateral">
+            <h3>Pràctiques Recents</h3>
+            <a href="newcomen.htm" target="_blank">Projecte: Màquina de Newcomen</a>
+            <br>
+            <a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
+            <p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
+        </aside>    
+    </main>
+
+    <footer id="contacte">
+        <p>&copy; 2025 <a id="nomalumne" href="sobremi.htm">Emanuel Rodríguez Varela</a>. Tots els drets reservats.</p>
+        <p>Email: <a href="mailto:26emanuel.rodriguez@iesramonberenguer.cat">26emanuel.rodriguez@iesramonberenguer.cat</a></p>
+    </footer>
+
+</body>
+</html>
