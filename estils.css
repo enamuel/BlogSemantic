@@ -79,6 +79,11 @@ footer a {
 	color: #c7e5ff;
 }
 
+footer a:hover {
+	color: #BABABA;
+	}
+
+/* Estil per als articles */
 .articles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -86,3 +91,79 @@ footer a {
   flex: 3; /* ocupa 3/4 parts */
 }
 
+/* Estil per "Articles Recents" */
+.astitle {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    text-align: left;
+}
+
+
+/* Estil per als titols dels articles */
+.hdtitle {
+	color: black;
+	}
+
+a:hover {
+	color: #551d96;
+	}
+
+
+/* Estil per als titols dels articles */
+.enllaçmapa {
+	color: black;
+	}
+
+a:hover {
+	color: #551d96;
+	}
+
+/* Estil per als titols dels articles */
+.nomalumne {
+	color: black;
+	}
+
+a:hover {
+	color: #551d96;
+	}
+
+/* Estil per als "Segueix llegint..." */
+
+.segueix {
+	color: #551d96;
+	}
+
+.segueix:hover {
+	color: #7E7E7E;
+	}
+
+/* Vora arrodonida per als <iFrame> */
+iframe {
+	border: 1px solid #0D0D0D;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+/* Estil per la lectura dels articles */
+.inarticle {
+    display: flex;          /* o grid, según prefieras */
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: none;       /* quitar fondo blanco */
+    box-shadow: none;       /* quitar sombra */
+    border-radius: 0;       /* opcional */
+}
+
+/* Estil de la barra lateral */
+.lateral {
+	background-color: #e9ecef;
+	padding: 15px;
+	border-radius: 8px;
+	flex: 1; /* Ocupa 1/4 part de l'espai */
+	position: sticky;
+	top: 20px;
+	align-self: flex-start;
+}
