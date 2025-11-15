@@ -150,11 +150,15 @@ iframe {
     display: flex;          /* o grid, según prefieras */
     gap: 20px;
     width: 90%;
-    margin: 0 auto;
+    margin: 20 auto;
     min-height: 100vh;
     background: none;       /* quitar fondo blanco */
     box-shadow: none;       /* quitar sombra */
     border-radius: 0;       /* opcional */
+}
+
+.inarticle article {
+    flex: 3;
 }
 
 /* Estil de la barra lateral */
