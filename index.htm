@@ -9,6 +9,32 @@
 	<title>Blog de Programació</title>
 	<link rel="stylesheet" href="estils.css">
 </head>
+<script>
+var favicon_images = [
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq1.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq2.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq3.png'
+                ],
+    image_counter = 0; // To keep track of the current image
+
+setInterval(function() {
+    // remove current favicon
+    if(document.querySelector("link[rel='icon']") !== null)
+        document.querySelector("link[rel='icon']").remove();
+    if(document.querySelector("link[rel='shortcut icon']") !== null)
+        document.querySelector("link[rel='shortcut icon']").remove();
+        
+    // add new favicon image
+    document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+    // If last image then goto first image
+    // Else go to next image    
+    if(image_counter == favicon_images.length -1)
+        image_counter = 0;
+    else
+        image_counter++;
+}, 700);
+</script>
 <body>
     <header>
         <h1>Blog de Programació</h1>
@@ -20,88 +46,97 @@
             <li><a href="#contacte">Contacte</a></li>
         </ul>
     </nav>
+	<h1 class="astitle">Articles Recents</h1>
 	<main>
 		<section class="articles">
 	        <article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article8.htm">Projecte: Blog amb HTML Semàntic</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-11-05">05 de novembre de 2025</time></p>
 	           	 </header>
           		 <section>
-					<p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-					<a href="article.htm">Segueix llegint...</a>
+					<p>La pràctica final del trimestre és fer un blog de totes les pràctiques amb...</p>
+					<a class="segueix" href="article8.htm">Segueix llegint...</a>
           		 </section>
-    	    </article>
-			<article>
+			</article>
+	        <article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
-	            </header>
-	            <section>
-	                <p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-	                <a href="article.htm">Segueix llegint...</a>
-	            </section>
+	                <h2><a class="hdtitle" href="article7.htm">Projecte: Màquina de Newcomen</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-10-29">29 d'octubre de 2025</time></p>
+	           	 </header>
+          		 <section>
+					<p>La segona pràctica del trimestre està relacionada amb la revolució industrial...</p>
+					<a class="segueix" href="article7.htm">Segueix llegint...</a>
+          		 </section>
 			</article>
 			<article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article6.htm">Mapejat d'Imatges</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-10-23">23 d'octubre de 2025</time></p>
 	            </header>
 				<section>
-					<p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-                	<a href="article.htm">Segueix llegint...</a>
+					<p>En HTML, el mapejat d'una imatge és una llista de coordenades relacionada amb...</p>
+                	<a class="segueix" href="article6.htm">Segueix llegint...</a>
 				</section>
 			</article>
 			<article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article5.htm">Projecte: Horari</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-10-10">10 d'octubre de 2025</time></p>
 				</header>
 				<section>
-	                <p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-	                <a href="article.htm">Segueix llegint...</a>
+	                <p>Avui hem començat la primera pràctica del trimestre: Fer el nostre horari de clases amb els coneixements previs...</p>
+	                <a class="segueix" href="article5.htm">Segueix llegint...</a>
 	            </section>
 			</article>
 			<article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article4.htm">Introducció al CSS</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-10-01">1 d'octubre de 2025</time></p>
 				</header>
 				<section>
-	                <p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-	                <a href="article.htm">Segueix llegint...</a>
+	                <p>El CSS o <b><i>Cascading Style Sheets</i></b> és el llenguatge de fulls de estils utilitzat en...</p>
+	                <a class="segueix" href="article4.htm">Segueix llegint...</a>
 	            </section>
 			</article>
 			<article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article3.htm">Llistes</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-30">30 de setembre de 2025</time></p>
 				</header>
 				<section>
-	                <p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-	                <a href="article.htm">Segueix llegint...</a>
+	                <p>Les llistes són un conjunt d'informació formatejada amb la finalitat...</p>
+	                <a class="segueix" href="article3.htm">Segueix llegint...</a>
 	            </section>
 			</article>
 			<article>
 	            <header>
-	                <h2>Hola, Món!</h2>
-	                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">16 de setembre de 2025</time></p>
+	                <h2><a class="hdtitle" href="article2.htm">Un món d'Enllaços i Imatges</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-18">18 de setembre de 2025</time></p>
+	            </header>
+	            <section>
+	                <p>Quan el WWW (<b>World Wide Web</b>) va ser creat, encara no existien els enllaços ni les les imatges...</p>
+	                <a class="segueix" href="article2.htm">Segueix llegint...</a>
+	            </section>
+			</article>
+			<article>
+	            <header>
+	                <h2><a class="hdtitle" href="article.htm">Hola, Món!</a></h2>
+	                <p>Publicat per: <a class="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-09-16">17 de setembre de 2025</time></p>
 				</header>
 				<section>
 	                <p>"Hola, Món!" va ser vist per primera vegada al 1978...</p>
-	                <a href="article.htm">Segueix llegint...</a>
+	                <a class="segueix" href="article.htm">Segueix llegint...</a>
 	            </section>
 			</article>
 		</section>
-        <aside>
+        <aside class="lateral">
             <h3>Pràctiques Recents</h3>
 				<a href="newcomen.htm" target="_blank">Projecte: Màquina de Newcomen</a>
 					<br>
 				<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
 					<br>
-				<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
-					<br>
-				<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
+				<a href="horari.htm" target="_blank">Projecte: Horari</a>
 				<p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
         </aside>
     </main>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!-- Emanuel Rodriguez -->
+<!-- Programació Curs 25/26 -->
+<!-- Taula amb Estils Externs -->
+
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Taula HTML5 amb Estils Externs</title>
+
+	<link rel="stylesheet" href="taulaestils.css">
+
+</head>
+<body>
+
+	<h1>Exemple de Taula Semàntica en HTML5</h1>
+	
+	<table id="taula">
+		<caption>Taula d'Exemples de Productes i Preus</caption>
+			
+		<colgroup>
+			<col span="2" class="col-categoria">
+			<col class="col-preu">
+		</colgroup>
+		
+		<thead>
+			<tr>
+				<th scope="col">Nom del Producte</th>
+				<th scope="col">ID</th>
+				<th scope="col">Preu (€)</th>
+			</tr>
+		</thead>
+	
+		<tfoot>
+			<tr>
+				<td colspan="2">Total d'articles mostrats:</td>
+				<td>3</td>
+			</tr>
+		</tfoot>
+		
+		<tbody>
+			<tr>
+				<td data-label="Producte">Poma</td>
+				<td data-label="ID">A001</td>
+				<td data-label="Preu">0.50</td>
+			</tr>
+			<tr>
+				<td data-label="Producte">Plàtan</td>
+				<td data-label="ID">A002</td>
+				<td data-label="Preu">0.80</td>
+			</tr>
+			<tr>
+				<td data-label="Producte">Taronja</td>
+				<td data-label="ID">A003</td>
+				<td data-label="Preu">0.65</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

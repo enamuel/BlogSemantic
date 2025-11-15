@@ -1,0 +1,57 @@
+/* Estils bàsics per a la taula */
+#Horari {
+	width: 100%; /* La taula ocupa tota l'amplada disponible */
+	border-collapse: collapse; /* Elimina l'espai entre les vores de les cel·les */
+	font-family: Helvetica;
+	}
+
+/* Estil de les cel·les i capçaleres */
+#Horari th,
+#Horari td {
+	border: 1px solid #727272; /* Vora de 1px a totes les cel·les */
+	padding: 10px;
+	text-align: center;
+	}
+
+/* Estil per a la capçalera */
+#Horari thead {
+	background-color: #f2f2f2;
+	}
+
+/* Estil per a la columna de preus (usant <colgrup> i <col>) */
+.col-hores {
+	background-color: #e0f7fa; /* Color de fons lleuger */
+	width: 100px;
+	text-align: right !important; /* Alineació a la dreta per a números */
+	}
+
+/* Estil pel títol */
+#Horari caption {
+	font-weight: bold;
+	margin-bottom: 10px;
+	caption-side: top; /* Posiciona el títol a sobre */
+	}
+
+/* Estil per a (<h1>) */
+h1 {
+	font-weight: bold;
+	font-family: Helvetica;
+	text-align: center;
+	}
+
+/* Estil per a (<a>) */
+a {
+	color: black;
+	}
+
+a:hover {
+	color: #551d96;
+	}
+
+/* Estil per als credits */
+p {
+	color: #c2c2c2;
+	font-family: Helvetica;
+	font-size: 10px;
+	}
+

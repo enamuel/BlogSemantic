@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Emanuel Rodriguez>
+<!-- Programació Curs 25/26 -->
+<!-- Salutació Personalitzada -->
+
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Salutació Personalitzada</title>
+</head>
+<body>
+
+	<h1>Benvingut a la classe de Programació!</h1>
+
+	<p>Introdueix el teu nom:</p>
+	<input type="text" id="nomAlumne">
+	<button onclick="saludar()">Saludar</button>
+
+	<p id="resposta"></p>
+
+	<script>
+		function saludar() {
+			// Obtenim el valor de l'entrada de text amb l'ID 'nomAlumne'
+				let nom = document.getElementById ('nomAlumne').value;
+
+			// Creem un objecte de data per obtenir la data actual
+				let dataAvui = new Date();
+			// Format de la data (dia de la setmana, dia, mes, any)
+				let opcionsData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				let dataFormatada = dataAvui.toLocaleDateString ('ca-ES', opcionsData);
+			// Construïm el missatge de salutació complet
+				let missatge = "Hola " + nom + ", avui es " + dataFormatada + ".";
+			// Mostrem el missatge a l'element amb l'ID 'resposta'
+				document.getElementById('resposta').textContent = missatge;
+			}									
+	</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Emanuel Rodriguez -->
+<!-- Programació Curs 25/26 -->
+<!-- 2n Exemple de Llistes en HTML -->
+
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemple de Llistes en HTML</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			line-height: 1.6;
+		}
+		
+		h1, h2, h3 {
+			color: #333;
+		}
+
+		/* Estil per a la llista de navegació */
+		.menu-navegacio ul {
+			list-style-type: none; /* Elimina les vinyetes */
+			margin: 0;
+			padding: 0;
+			background-color: #4CAF50;
+			overflow: hidden;
+			border-radius: 5px;
+		}
+
+		.menu-navegacio li {
+			float: left; /* Posa els elements en línia */
+		}
+		
+		.menu-navegacio li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none; /* Elimina el subratllat dels enllaços */
+		}
+		
+		.menu-navegacio li a:hover {
+			background-color: #45a049;
+		}
+
+		/* Estil per a la llista de descripció */
+		dl {
+			margin:20px 0;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		dt {
+			font-weight: bold;
+			color: #555;
+			margin-top: 10px;
+		}
+
+		dd {
+
+			margin-left: 20px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Tots els Tipus de Llistes HTML</h1>
+
+
+	<h2>1. Llista Desordenada ("ul")</h2>
+	<p>Utilitzada per a elements sense un ordre particular. Cada element es marca amb una vinyeta.</p>
+	<ul>
+		<li>Element 1</li>
+		<li>Element 2</li>
+		<li>Element 3</li>
+	</ul>
+
+
+	<h2>2. Llista Ordenada ("ol")</h2>
+	<p>Utilitzada per a elements que tenen un ordre específic. Es numeren automàticament.</p>
+	<ol>
+		<li>Primer pas</li>
+		<li>Segon pas</li>
+		<li>Tercer pas</li>
+	</ol>
+	
+	---
+
+	<h2>3. Llista Desordenada amb Enllaços e Imatges</h2>
+	<p>Una combinació habitual per a galeries o menús.</p>
+	<ul>
+		<li>
+			<a href="https://ca.wikipedia.org/wiki/Lleó">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Lion_in_masai_mara.jpg/1200px-Lion_in_masai_mara.jpg" alt="Un lleó" width="400px">
+				Lleó
+			</a>
+		</li>
+		<li>
+			<a href="https://ca.wikipedia.org/wiki/Elefant">
+				<img src="https://www.eschenbach-sportoptics.com/fileadmin/user_upload/Blog_Begleitbilder_SO/so-safari-elefant-mit-voegeln-in-afrikanischer-savanne..jpg" alt="Un elefant" width="400px">
+				Elefant
+			</a>
+		</li>
+	</ul>
+
+	---
+	
+	<h2>4. Llista de Descripció ("dl")</h2>
+	<p>Ideal per a termes i les seves definicions.</p>
+	<dl>
+		<dt>HTML</dt>
+		<dd>Llenguatge d'etiquetes d'hipertext, utilitzat per estructurar el contingut d'una pàgina web.</dd>
+		
+		<dt>CSS</dt>
+		<dd>Fulls d'estil en cascada, utilitzats per estilitzar i dissenyar l'aparença d'una pàgina web.</dd>
+	</dl>
+	
+	---
+
+	<h2>5. Llista Anidada (Combinant "ul" i "oi")</h2>
+	<p>Per crear estructures jeràrquiques amb subllistes.</p>
+	<ul>
+		<li>
+			Aliments
+			<ul>
+				<li>Fruites
+					<ol>
+						<li>Poma</li>
+						<li>Plàtan</li>
+					</ol>
+				</li>
+				<li>Verdures</li>
+			</ul>
+		</li>
+		<li>Begudes</li>
+	</ul>
+
+	---
+
+	<h2>6. Exemple de Llista Estilitzada com a Menú</h2>
+	<p>Una llista desordenada ("ul") transformada en una barra de navegació amb CSS.</p>
+	<nav class="menu-navegacio">
+		<ul>
+			<li><a href="#inici">Inici</a></li>
+			<li><a href="#productes">Productes</a></li>
+			<li><a href="#serveis">Serveis</a></li>
+			<li><a href="#contacte">Contacte</a></li>
+		</ul>
+	</nav>
+
+</body>
+</html>
