@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- Emanuel Rodriguez -->
+<!-- Programació Curs 25/26 -->
+<!-- Blog amb HTML Semàntic -->
+
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog de Programació</title>
+	<link rel="stylesheet" href="estils.css">
+</head>
+<script>
+var favicon_images = [
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq1.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq2.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq3.png'
+                ],
+    image_counter = 0; // To keep track of the current image
+
+setInterval(function() {
+    // remove current favicon
+    if(document.querySelector("link[rel='icon']") !== null)
+        document.querySelector("link[rel='icon']").remove();
+    if(document.querySelector("link[rel='shortcut icon']") !== null)
+        document.querySelector("link[rel='shortcut icon']").remove();
+        
+    // add new favicon image
+    document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+    // If last image then goto first image
+    // Else go to next image    
+    if(image_counter == favicon_images.length -1)
+        image_counter = 0;
+    else
+        image_counter++;
+}, 700);
+</script>
+<body>
+    <header>
+        <h1>Blog de Programació</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.htm">Inici</a></li>
+            <li><a href="sobremi.htm">Sobre Mi</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+        </ul>
+    </nav>
+	<main>
+	<section class="inarticle">
+        <article>
+            <header>
+                <h2>Introducció al CSS</h2>
+                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-10-01">01 d'octubre de 2025</time></p>
+            </header>
+		<section>
+                <p>El CSS o <b><i>Cascading Style Sheets</i></b> és el llenguatge de fulls de estils utilitzat per presentar i estilitzar pàgines HTML o Arxius XML (<i>Extensible Markup Language</i>).</p>
+		<p>L'introducció al CSS ve acompanyada amb l'introducció a les etiquetes per a fer taules: &lt;table&gt; &lt;th&gt;, &lt;tr&gt; i &lt;td&gt;, respectivament. Després tenim &lt;caption&gt; i &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt; i &lt;colgroup&gt;, &lt;col&gt; per a especificar.</p>
+		<p>Fent ús dels <a href="article2.htm" target="_blank">enllaços</a>, el full d'estils es pot enllaçar amb &lt;link rel="stylesheet" href="fulldestils.css"&gt;.</p>
+		<center>
+			<h1>Taula amb Estils Externs</h1>
+				<iframe src="extaula.htm" width="50%" height="400" frameborder="0"></iframe>
+		</center>
+		<br>
+		</section>
+	</section>
+	<section>
+        <aside class="lateral">
+            <h3>Pràctiques Recents</h3>
+		<a href="newcomen.htm" target="_blank">Projecte: Màquina de Newcomen</a>
+		<br>
+		<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
+		<br>
+		<a href="horari.htm" target="_blank">Projecte: Horari</a>
+		<p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
+        </aside>
+	</section>
+    </main>
+    <footer id="contacte">
+        <p>&copy; 2025 <a id="nomalumne" href="sobremi.htm">Emanuel Rodríguez Varela</a>. Tots els drets reservats.</p>
+        <p>Email: <a href="mailto:26emanuel.rodriguez@iesramonberenguer.cat">26emanuel.rodriguez@iesramonberenguer.cat</a></p>
+    </footer>
+</body>
+</html>

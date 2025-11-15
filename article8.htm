@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<!-- Emanuel Rodriguez -->
+<!-- Programació Curs 25/26 -->
+<!-- Blog amb HTML Semàntic -->
+
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog de Programació</title>
+	<link rel="stylesheet" href="estils.css">
+</head>
+<script>
+var favicon_images = [
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq1.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq2.png',
+                    'https://raw.githubusercontent.com/enamuel/BlogSemantic/4b4835d36e93cb736a525112da0aab494ac54d64/favicon/fav-icon-seq3.png'
+                ],
+    image_counter = 0; // To keep track of the current image
+
+setInterval(function() {
+    // remove current favicon
+    if(document.querySelector("link[rel='icon']") !== null)
+        document.querySelector("link[rel='icon']").remove();
+    if(document.querySelector("link[rel='shortcut icon']") !== null)
+        document.querySelector("link[rel='shortcut icon']").remove();
+        
+    // add new favicon image
+    document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+    // If last image then goto first image
+    // Else go to next image    
+    if(image_counter == favicon_images.length -1)
+        image_counter = 0;
+    else
+        image_counter++;
+}, 700);
+</script>
+<body>
+    <header>
+        <h1>Blog de Programació</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.htm">Inici</a></li>
+            <li><a href="sobremi.htm">Sobre Mi</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+        </ul>
+    </nav>
+	<main>
+	<section class="inarticle">
+        <article>
+            <header>
+                <h2>Projecte: Blog amb HTML Semàntic</h2>
+                <p>Publicat per: <a id="nomalumne" href="sobremi.htm">Emanuel</a> el <time datetime="2025-11-05">05 de novembre de 2025</time></p>
+            </header>
+		<section>
+                <p>La pràctica final del trimestre és fer un blog de totes les pràctiques amb els coneixements adquirits i a més, afegir coneixements nous com l'HTML Semàntic i les diferents formes d'estilitzar en CSS.</p>
+		<p>En aquest projecte he decidit allotjar el blog en GitHub, per familiaritzar-me amb el lloc web i les seves característiques per "desplegar" llocs web a l'internet amb ajuda de GitHub Actions.</p>
+		<center>
+<!-- Targeta estil GitHub amb dades reals -->
+<a href="https://github.com/enamuel/BlogSemantic" target="_blank" class="github-card">
+  <div class="github-card">
+    <div class="card-header">
+      <span class="repo-name">BlogSemantic</span>
+      <span class="visibility">Public</span>
+    </div>
+    <p class="description">Blog de les pràctiques i exercicis fet amb HTML Semàntic.</p>
+    <div class="card-footer">
+      <span class="dot"></span>
+      <span class="language">HTML</span>
+      <span class="stars">★ <span id="stars-count">...</span></span>
+      <span class="forks">⑂ <span id="forks-count">...</span></span>
+    </div>
+  </div>
+</a>
+
+<!-- Script per obtenir dades reals de GitHub -->
+<script>
+  fetch("https://api.github.com/repos/enamuel/BlogSemantic")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("stars-count").textContent = data.stargazers_count;
+      document.getElementById("forks-count").textContent = data.forks_count;
+    })
+    .catch(error => {
+      console.error("Error carregant dades del repositori:", error);
+    });
+</script>
+
+<!-- Estils CSS -->
+<style>
+.github-card {
+  display: block;
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #24292f;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+.github-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.repo-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0969da;
+}
+.visibility {
+  background-color: #ddf4ff;
+  color: #0969da;
+  border: 1px solid #0969da;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.description {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #57606a;
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #e34c26;
+  border-radius: 50%;
+}
+.stars, .forks {
+  font-size: 13px;
+}
+</style>
+
+		</center>
+		</section>
+	</section>
+	<section>
+        <aside class="lateral">
+            <h3>Pràctiques Recents</h3>
+		<a href="newcomen.htm" target="_blank">Projecte: Màquina de Newcomen</a>
+		<br>
+		<a href="mapainteractiu.htm" target="_blank">Mapa d'Imatge Interactiu</a>
+		<br>
+		<a href="horari.htm" target="_blank">Projecte: Horari</a>
+		<p>Visita el <a href="mapa.htm">Mapa del Lloc</a> per explorar el blog.</p>
+        </aside>
+	</section>
+    </main>
+    <footer id="contacte">
+        <p>&copy; 2025 <a id="nomalumne" href="sobremi.htm">Emanuel Rodríguez Varela</a>. Tots els drets reservats.</p>
+        <p>Email: <a href="mailto:26emanuel.rodriguez@iesramonberenguer.cat">26emanuel.rodriguez@iesramonberenguer.cat</a></p>
+    </footer>
+</body>
+</html>

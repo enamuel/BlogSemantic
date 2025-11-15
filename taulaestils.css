@@ -1,0 +1,33 @@
+/* Estils bàsics per a la taula */
+#taula {
+	width: 100%; /* La taula ocupa tota l'amplada disponible */
+	border-collapse: collapse; /* Elimina l'espai entre les vores de les cel·les */
+	font-family: sans-serif;
+	}
+
+/* Estil de les cel·les i capçaleres */
+#taula th,
+#taula td {
+	border: 1px solid #CCC; /* Vora de 1px a totes les cel·les */
+	padding: 10px;
+	text-align: left;
+	}
+
+/* Estil per a la capçalera */
+#taula thead {
+	background-color: #f2f2f2;
+	}
+
+/* Estil per a la columna de preus (usant <colgrup> i <col>) */
+.col-preu {
+	background-color: #e0f7fa; /* Color de fons lleuger */
+	width: 100px;
+	text-align: right !important; /* Alineació a la dreta per a números */
+	}
+
+/* Estil pel títol */
+#taula caption {
+	font-weight: bold;
+	margin-bottom: 10px;
+	caption-side: top; /* Posiciona el títol a sobre */
+	}
